@@ -1,0 +1,6 @@
+var button = require('gpio-button'),
+    button4 = new button('button4');
+
+button4.on('press', function(){
+    console.log('press');
+});

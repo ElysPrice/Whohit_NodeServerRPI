@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Whohit</title>
+	
+	<script src="http://code.jquery.com/jquery.js"></script>
+	<script src="/index.js"></script>
+
+</head>
+
+<body>
+  
+  <h1>Vídeo porteiro - WhoHit</h1>
+
+  <input type="button" onclick="destravar()" value="Excluir Item">
+  
+  <script type="text/javascript">
+    var gpio = require('onoff').Gpio;
+    var gpioPin = new gpio (21, 'out');
+    var destravar = function(){
+
+    gpioPin.writeSync(1);
+    gpioPin.writeSync(0);
+
+    
+    console.log('ABRIU');
+
+    var fim = function(){
+    gpioPin.writeSync(1);
+    gpioPin.unexport();
+
+
+    }
+
+    fim()
+    }
+  </script>
+  
+</body>
+</html>
