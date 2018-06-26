@@ -12,7 +12,7 @@ var botao = rpi_gpio_buttons([4], {mode: rpi_gpio_buttons.MODE_BCM});
 
 //Firebase
 var FCM = require('fcm-node');
-var chaveServer = 'AAAAaYYvvqY:APA91bGGqWkqAa-jCvAhee2YKlpRbc6Ag9U_P6YfTCljT_b2NI2MbUPlVNdgAaFd4PU7d_OIPlO3cGMN3cS36oZdK59_V3AaWfZ1VxFiij4bplrxmo6asYfRfVe6lW6NGyltUkzRMzTM';
+var chaveServer = '';
 var fcm = new FCM(chaveServer);
 
 /*botao.watch(function(err, value){
